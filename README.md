@@ -5,8 +5,12 @@ imperative and declarative. This exercise is meant to provide training for imper
 programing paradigm, the use of regular expressions and writing pseudocode.
 
 # Procedures
-First, the following pseudocode was written; 
-Pseudocode
+First, the following pseudocode was written;
+
+**Pseudocode**
+
+#Reads data from file, extract relevant information and print to console
+
 1. fileReaderVariable <- **Initialize** a file Reader
 
 2. container <- **Initialize** a container
