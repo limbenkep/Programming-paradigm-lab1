@@ -10,8 +10,25 @@ import java.util.regex.*;
  * @author Lima Honorine (holi1900)
  */
 
-
+/**
+ * Pseudocode
+ * 1. fileReaderVariable <- Initialize a fileReader
+ * 2. container <- Initialize a container
+ * 3. while not End of file
+ * 4.   readline
+ * 5.   add line to container
+ * 6. count = 0
+ * 7. while count is not greater than the size of containerVariable
+ * 8.   print line in container at index = count, count + 1, count + 3
+ * 9.   increment count by 6
+ */
 public class Solution {
+
+    /**
+     * Uses imperative programming style to
+     * Reads data from file, extract Customer ID, Name, Phone information
+     * and print to console
+     */
     private void imperativeSolution() {
         List<String> lines = new ArrayList<>();
 
@@ -29,19 +46,23 @@ public class Solution {
         if(!lines.isEmpty()){
             int count = 0;
             while(count<lines.size()){
-                //System.out.println(lines.get(count) + lines.get(count + 1) + lines.get(count + 3));
                 System.out.printf("%s %n%s %n%s%n", lines.get(count), lines.get(count + 1), lines.get(count + 3));
                 count += 6;
             }
         }
     }
 
+    /**
+     * Uses declarative programming style to
+     * Reads data from file, filter Customer ID, Name, Phone information
+     * and print to console
+     */
     private void declarativeSolution() {
-        final String regex = "(^Customer ID: \\d{3})|(^Name: \\w+\\s\\w+)|(^Phone: \\d{3}-\\d{3}-\\d{4})";
-        BufferedReader in = new BufferedReader(new InputStreamReader(Objects.requireNonNull(
-                this.getClass().getResourceAsStream("/customers.txt"))));
-        in.lines().filter(s -> s.matches(regex)).forEach(System.out::println);
-        //Files.lines(Paths.get("/", "customers.txt")).filter(s -> s.matches(regex)).forEach(System.out::println);
+        new BufferedReader(new InputStreamReader(Objects.requireNonNull(
+                this.getClass().getResourceAsStream("/customers.txt"))))
+                .lines()
+                .filter(s -> s.matches("(^Customer ID: \\d{3})|(^Name: \\w+\\s\\w+)|(^Phone: \\d{3}-\\d{3}-\\d{4})"))
+                .forEach(System.out::println);
     }
 
     /**
