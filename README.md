@@ -8,14 +8,22 @@ programing paradigm, the use of regular expressions and writing pseudocode.
 First, the following pseudocode was written; 
 Pseudocode
 1. fileReaderVariable <- **Initialize** a file Reader
+
 2. container <- **Initialize** a container
-3. **while** not End of file  
-4. >>readline
-5. >>   **Add** line to container``
+
+3. **while** not End of file
+
+4. * readline
+
+5. * **Add** line to container
+
 6. count = 0
+
 7. **while** count is not greater than the size of containerVariable
-8.   >>**Print** line in container at index = count, count + 1, count + 3
-9.   >>**increment** count by 6
+
+8.   * **Print** line in container at index = count, count + 1, count + 3
+
+9.   * **increment** count by 6
 
 Secondly, the pseudocode was implemented using the imperative programming style in java. 
 The code is implemented within the imperativeSolution() method in the provided lab skeleton program 
