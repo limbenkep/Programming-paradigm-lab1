@@ -1,4 +1,9 @@
 # Laboration 1
+
+## Environment & Tools
+Window 10 pro, git version 2.33.0.windows.2, Intellij 2022.2.1
+
+## Purpose
 The aim of this lab is write pseudocode and implementation for a program that reads customer data from a .txt file,
 extract relevant data and print the information to console using two different programming styles; 
 imperative and declarative. This exercise is meant to provide training for imperative and declarative
